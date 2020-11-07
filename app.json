@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/classify/classify",
+    "pages/recommend/recommend",
+    "pages/ShoppingCart/ShoppingCart",
+    "pages/profile/profile",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/home/home",
+      "text": "",
+      "iconPath": "/images/jd-icon.png",
+      "selectedIconPath": "/images/jd-icon2.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "",
+        "iconPath": "/images/classify.png",
+        "selectedIconPath": "/images/classify2.png"
+      },
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "",
+        "iconPath": "/images/jingxi.png",
+        "selectedIconPath": "/images/jingxi.png"
+      },
+      {
+        "pagePath": "pages/ShoppingCart/ShoppingCart",
+        "text": "",
+        "iconPath": "/images/cart.png",
+        "selectedIconPath": "/images/cart2.png"
+      },
+      {
+          "pagePath": "pages/profile/profile",
+          "text": "",
+          "iconPath": "/images/icon-me_dark.png",
+          "selectedIconPath": "/images/icon-me_active.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
