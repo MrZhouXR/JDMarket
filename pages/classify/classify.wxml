@@ -1,2 +1,62 @@
 <!--pages/classify/classify.wxml-->
-<text>pages/classify/classify.wxml</text>
+<navbar border="border-bottom: 1px solid #bbb7b7;"></navbar>
+<view class="classify">
+  <view class="left">
+    <van-sidebar active-key="{{ activeKey }}">
+      <block wx:for="{{classify}}" wx:key="index">
+        <van-sidebar-item title="{{item}}" />
+      </block>
+    </van-sidebar>
+  </view>
+  <view class="right">
+    <view class="right-ad">
+      <swiper autoplay="true" interval="3000" circular="true" duration="800" indicator-dots="true"
+        indicator-active-color="#fff">
+        <swiper-item>
+          <image
+            src="http://m.360buyimg.com/mobilecms/s700x280_jfs/t1/114550/12/7437/102254/5ec3971fE78db18f4/438d4775f9d653ee.jpg!q70.jpg.dpg"
+            mode="scaleToFill" />
+        </swiper-item>
+        <swiper-item>
+          <image
+            src="http://m.360buyimg.com/mobilecms/s700x280_jfs/t1/146754/5/13417/182956/5fa3d462E64c31ba7/f53aee88a9f9b400.jpg!cr_1125x445_0_171!q70.jpg.dpg" />
+        </swiper-item>
+        <swiper-item>
+          <image
+            src="http://m.360buyimg.com/mobilecms/s700x280_jfs/t1/125587/17/16983/119787/5f9fc90dE0a91548c/cba1c087e6e3e21f.png!q70.jpg.dpg" />
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class="right-classify" wx:for="{{2}}" wx:key="index">
+      <view class="right-classify__title">
+        <h4>热门分类</h4>
+      </view>
+      <view class="desc" wx:for="{{5}}" wx:key="index">
+        <view class="one">
+          <view class="img">
+            <image src="http://img10.360buyimg.com/focus/s140x140_jfs/t11503/241/2246064496/4783/cea2850e/5a169216N0701c7f1.jpg"/>
+          </view>
+          <view class="content">
+            <p>手机</p>
+          </view>
+        </view>
+        <view class="one">
+          <view class="img">
+            <image src="http://img10.360buyimg.com/focus/s140x140_jfs/t11503/241/2246064496/4783/cea2850e/5a169216N0701c7f1.jpg"/>
+          </view>
+          <view class="content">
+            <p>手机</p>
+          </view>
+        </view>
+        <view class="one">
+          <view class="img">
+            <image src="http://img10.360buyimg.com/focus/s140x140_jfs/t11503/241/2246064496/4783/cea2850e/5a169216N0701c7f1.jpg"/>
+          </view>
+          <view class="content">
+            <p>手机</p>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

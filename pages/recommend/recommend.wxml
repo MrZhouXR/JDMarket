@@ -1,2 +1,20 @@
 <!--pages/recommend/recommend.wxml-->
-<text>pages/recommend/recommend.wxml</text>
+<view>
+  <navbar></navbar>
+  <view class="image">
+    <view class="img">
+      <image
+        src="http://img12.360buyimg.com/mcoss/s710x206_jfs/t1/134119/26/14949/60662/5fa5735fe26073c5c/3598a32428bc6369.jpg!q70.dpg.webp" mode="aspectFill"/>
+    </view>
+  </view>
+  <view class="classify">
+    <van-tabs active="{{ active }}">
+      <block wx:for="{{classify}}">
+        <van-tab title="{{item}}"></van-tab>
+      </block>
+    </van-tabs>
+  </view>
+  <view class="goods">
+    <waterfall></waterfall>
+  </view>
+</view>

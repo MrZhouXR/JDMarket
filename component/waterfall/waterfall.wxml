@@ -1,0 +1,17 @@
+<!--component/waterfall/waterfall.wxml-->
+<view class='content' wx:for="{{5}}" wx:key="index">
+<view class='left'>
+  <block wx:for="{{leftList}}" wx:key="index">
+    <image class='pic' style='height:{{item.Height}}px' src='{{item.Cover}}'></image>
+    <view class="title"><p>{{item.title}}</p></view>
+    <view class="price"><p>{{item.price}}</p></view>
+  </block>
+</view>
+<view class='right'>
+  <block wx:for="{{rightList}}" wx:key="index">
+    <image class='pic' style='height:{{item.Height}}px' src='{{item.Cover}}'></image>
+    <view class="title"><p>{{item.title}}</p></view>
+    <view class="price"><p>{{item.price}}</p></view>
+  </block>
+</view>
+</view>

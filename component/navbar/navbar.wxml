@@ -1,2 +1,12 @@
 <!--component/navbar/navbar.wxml-->
-<text>component/navbar/navbar.wxml</text>
+<view >
+  <!-- 弥补一下nav-bar的高度 -->
+  <view style="height: {{topHeight}}px"></view>
+  <view class="container" style="{{borderBottom}}">
+    <!-- 手机头部的电量显示栏 -->
+    <view style="{{statusBarStyle}}"></view>
+    <view class="nav-bar" style="{{navBarStyle}}">
+      <van-search value="{{ value }}" shape="round" background="#fff" placeholder="请输入搜索关键词" />
+    </view>
+  </view>
+</view>

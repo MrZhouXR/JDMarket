@@ -1,1 +1,18 @@
 /* component/navbar/navbar.wxss */
+.container{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+ 
+}
+.nav-bar{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  font-size: 34rpx;
+}
+van-search{
+ width: 70%;
+}
