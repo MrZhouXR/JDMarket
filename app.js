@@ -5,7 +5,15 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    wx.db = {}
+    let info =wx.getSystemInfoSync()
+    wx.db.statusBarHeight = info.statusBarHeight
+    if (info.platform ==='android'){
+      wx.db.navBarHeight = 48
+    }else{
+      wx.db.navBarHeight = 44
 
+    }
     // 登录
     wx.login({
       success: res => {
