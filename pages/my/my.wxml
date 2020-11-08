@@ -1,2 +1,71 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="wrapper">
+  <view class="head">
+    <view class="login">
+      <view class="touxiang">
+        <image id="txImg" src="../../images/my.png"></image>
+      </view>
+      <view class="user-info">
+        <view class="name-wrap">
+          <span>请登录/注册您的账号</span>
+          <view class="setImg">
+            <image id="setImage" src="../../images/set1.png"></image>
+          </view>
+        </view>
+        <view class="btn">
+          <button class="btn-login">
+            <van-icon class="user-circle" name="user-circle-o" />
+            <p class="click-login">点击登录</p>
+          </button>
+        </view>
+      </view>
+    </view>
+    <view class="shoucang">
+     <tagList id="tagList" wx:for="{{tagList}}" wx:key="index" tagName="{{item.tagName}} " color="{{item.color}}">
+     </tagList>
+    </view>
+    <view class="plus-wrap">
+      <view class="inner">
+        <view class="title">
+          <view class="left-title">
+            免费试用 立领1张运费券
+          </view>
+          <view class="right-title">
+            0元试用
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="order-group">
+      <view class="contrainer">
+        <view class="top-line-box">
+          <view class="waitPay">
+            <span class="entrance_txt">
+              待付款
+            </span>
+          </view>
+          <view class="waitRecieve">
+            <span class="entrance_txt">
+              待收货
+            </span>
+          </view>
+          <view class="waitRecommend">
+            <span class="entrance_txt">
+              待评价
+            </span>
+          </view>
+          <view class=" entrance">
+            <span class="entrance_txt">
+              退换/售后
+            </span>
+          </view>
+          <view class="result">
+            <view class="result box">
+              <span>全部订单</span>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

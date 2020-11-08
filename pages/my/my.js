@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tagList:[
+      {
+        tagName:'商品收藏',
+      },
+      {
+        tagName:'店铺收藏',
+      },
+      {
+        tagName:'我的足迹',
+      }
+  ]
   },
 
   /**
