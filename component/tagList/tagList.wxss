@@ -1,0 +1,16 @@
+/* component/tagList/tagList.wxss */
+.list-group{
+  display: block;
+  margin-top: 30rpx;
+  margin-left: 80rpx;
+  margin-right: 43rpx;
+}
+.text{
+  margin: 0 auto;
+  text-align: center;
+}
+.tagName{
+  margin: 0 auto;
+  font-size: 28rpx;
+  color:#ffffff
+}
