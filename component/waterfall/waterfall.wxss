@@ -1,0 +1,43 @@
+/* component/waterfall/waterfall.wxss */
+page {
+  width: 100%;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 0 10px;
+}
+
+.left {
+  background-color: #fff;
+  width: 345rpx;
+  border-radius: 5px;
+}
+.right {
+  background-color: #fff;
+  margin-left: 20rpx;
+  width: 345rpx;
+  border-radius: 5px;
+}
+
+.pic {
+  width: 345rpx;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+}
+
+.title {
+  margin: 5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.price {
+  padding: 1px 0 10px 5px;
+  color: red;
+}
