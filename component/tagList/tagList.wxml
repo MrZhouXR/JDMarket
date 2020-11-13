@@ -1,6 +1,6 @@
 <!--component/tagList/tagList.wxml-->
 <view class="list-group">
-  <view class="text">-</view>
+  <view class="text">{{text}}</view>
   <view class="tagName">{{tagName}}</view>
 </view>
 

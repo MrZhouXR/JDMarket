@@ -7,6 +7,14 @@ Component({
     tagName:{
       type: String,
       value: '标题'
+    },
+    color:{
+      type: String,
+      value: '颜色'
+    },
+    text: {
+      type: String,
+      value: '文本内容'
     }
   },
 
