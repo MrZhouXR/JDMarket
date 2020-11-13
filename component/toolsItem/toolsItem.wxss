@@ -1,0 +1,18 @@
+/* component/toolsItem/toolsItem.wxss */
+.toolsitem{
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding-top: 24rpx;
+}
+.image{
+  display: block;
+  margin: 0 auto 6rpx;
+}
+.img-icon{
+  width: 70rpx;
+  height: 70rpx;
+}
+.item-key{
+  font-size: 20rpx;
+}

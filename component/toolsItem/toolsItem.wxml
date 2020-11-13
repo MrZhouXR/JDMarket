@@ -1,0 +1,7 @@
+<!--component/toolsItem/toolsItem.wxml-->
+<view class="toolsitem">
+  <view class="image">
+    <image class="img-icon" src='../../images/{{iconName}}'></image>
+  </view>
+  <span class="item-key">{{iconTitle}}</span>
+</view>
