@@ -1,2 +1,59 @@
 <!--pages/ShoppingCart/ShoppingCart.wxml-->
-<text>pages/ShoppingCart/ShoppingCart.wxml</text>
+<view class="shopping-cart">
+  <view class="emptycart" wx:if="emptycart == true">
+    <view class="cartImg">
+      <image src="../../images/购物车 (1).png" alt=""></image>
+    </view>
+    <view class="notice">
+      <span class="cart-notice">购物车空空如也，去逛逛吧~~</span>
+    </view>
+  </view>
+  <view class="recommend">
+      <view class="recommend-title">
+        <span class="recommend-title_text">
+          可能你想要
+        </span>
+      </view>
+      <view class="goodsList">
+        <view class="list">
+          <block wx:for="{{goodsList}}" wx:key="index">
+            <view class="goods-info">
+              <view class="cover">
+                <image src="../../images/{{item.imgName}}"></image>
+              </view>
+              <view class="info">
+                <view class="rec-name">
+                  <i class="mod_tag">
+                    <image src="../../images/{{item.tagName}}"></image>
+                  </i>
+                  {{item.goodsDesc}}
+                </view>
+                <view class="flex-wrap">
+                  <view class="price-info">
+                    <view class="price">
+                      ￥{{item.price}}
+                    </view>
+                    <view class="mod-sign">
+                      <span>{{item.mod}}</span>
+                    </view>
+                  </view>
+                  <view class="recommend-count">
+                    <view class="recommendNum">
+                      {{item.recommendNum}}条评论
+                    </view>
+                    <view class="recommendRate">
+                      {{item.recommendRate}}好评率
+                    </view>
+                    <view class="cartIcon">
+                      <image src="../../images/购物车.png"></image>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+  </view>
+</view>
+  
