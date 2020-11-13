@@ -2,27 +2,49 @@
 <view class="wrapper">
   <view class="head">
     <view class="login">
-      <view class="touxiang">
-        <image id="txImg" src="../../images/my.png"></image>
-      </view>
-      <view class="user-info">
-        <view class="name-wrap">
-          <span>请登录/注册您的账号</span>
-          <view class="setImg">
-            <image id="setImage" src="../../images/set1.png"></image>
-          </view>
+      <block wx:if="{{login == false}}">
+        <view class="touxiang">
+          <image class="txImg" src="../../images/my.png"></image>
         </view>
-        <view class="btn">
-          <button class="btn-login">
-            <van-icon class="user-circle" name="user-circle-o" />
-            <p class="click-login">点击登录</p>
+        <view class="user-info">
+          <view class="name-wrap">
+            <span>请登录/注册您的账号</span>
+            <view class="setImg">
+              <image id="setImage" src="{{setImage}}"></image>
+            </view>
+          </view>
+          <button id="btn" open-type="getUserInfo" bindtap="getUserInfo" wx:if="{{canIUse}}">
+            <!-- <view class="btn"> -->
+            <view class="btn-login">
+              <van-icon class="user-circle" name="user-circle-o" />
+              <span class="click-login">点击登录</span>
+            </view>
+            <!-- </view> -->
           </button>
         </view>
-      </view>
+      </block>
+      <block wx:elif="{{login == true}}">
+        <view class="touxiang ava">
+          <image class="txImg" id="txava" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="user-info user-info-t">
+          <view class="name-wrap">
+            <span>{{userInfo.nickName}}</span>
+            <view class="setImg">
+              <image id="setImage" src="{{setImage}}"></image>
+            </view>
+          </view>
+          <view class="hor-tips hor-tips-t">
+            <view class="notice">京享值433</view>
+            <view class="notice arrow">查看小白信用</view>
+          </view>
+        </view>
+      </block>
     </view>
     <view class="shoucang">
-     <tagList id="tagList" wx:for="{{tagList}}" wx:key="index" tagName="{{item.tagName}} " color="{{item.color}}">
-     </tagList>
+      <tagList id="tagList" wx:for="{{tagList}}" wx:key="index" tagName="{{item.tagName}} " color="{{item.color}}"
+        text="{{item.text}}">
+      </tagList>
     </view>
     <view class="plus-wrap">
       <view class="inner">
@@ -36,35 +58,112 @@
         </view>
       </view>
     </view>
-    <view class="order-group">
-      <view class="contrainer">
-        <view class="top-line-box">
-          <view class="waitPay">
-            <span class="entrance_txt">
-              待付款
-            </span>
-          </view>
-          <view class="waitRecieve">
-            <span class="entrance_txt">
-              待收货
-            </span>
-          </view>
-          <view class="waitRecommend">
-            <span class="entrance_txt">
-              待评价
-            </span>
-          </view>
-          <view class=" entrance">
-            <span class="entrance_txt">
-              退换/售后
-            </span>
-          </view>
-          <view class="result">
-            <view class="result box">
-              <span>全部订单</span>
-            </view>
+  </view>
+  <view class="order-group my-order">
+    <view class="rel-container">
+      <view class="top-line-box">
+        <view class="waitPay">
+          <span class="entrance_txt">
+            待付款
+          </span>
+        </view>
+        <view class="waitRecieve">
+          <span class="entrance_txt">
+            待收货
+          </span>
+        </view>
+        <view class="waitRecommend">
+          <span class="entrance_txt">
+            待评价
+          </span>
+        </view>
+        <view class=" entrance">
+          <span class="entrance_txt">
+            退换/售后
+          </span>
+        </view>
+        <view class="result">
+          <view class="entrance_txt">
+            <span>全部订单</span>
           </view>
         </view>
+      </view>
+    </view>
+  </view>
+  <view class="assets-group">
+    <view class="assets-list" wx:for="{{assetsList}}" wx:key="index">
+      <view class="list-group">
+        <view class="text">{{item.text}}</view>
+        <view class="tagName">{{item.tagName}}</view>
+      </view>
+    </view>
+    <view class="result">
+      <view class="entrance_txt box">
+        <span>我的资产</span>
+      </view>
+    </view>
+  </view>
+  <view class="openCard">
+    <view class="btn-openCard">
+      <span class="card">1元开卡</span>
+    </view>
+  </view>
+  <view class="toolsGame">
+    <view class="toolsTitle">游戏与互动</view>
+    <toolsItem class="toolsitem" wx:for="{{gamesItem}}" wx:key="index" iconName="{{item.iconName}}"
+      iconTitle="{{item.iconTitle}}">
+    </toolsItem>
+  </view>
+  <view class="toolsServer">
+    <view class="toolsTitle">工具与服务</view>
+    <toolsItem class="toolsitem" wx:for="{{serverItem}}" wx:key="index" iconName="{{item.iconName}}"
+      iconTitle="{{item.iconTitle}}">
+    </toolsItem>
+  </view>
+  <view class="guafen">
+    <image class="img-gf" src="../../images/瓜分十亿_bg.jpg"></image>
+  </view>
+  <view class="recommend">
+    <view class="recommend-title">
+      <span class="recommend-title_text">
+        为您推荐
+      </span>
+    </view>
+    <view class="goodsList">
+      <view class="list">
+        <block wx:for="{{goodsList}}" wx:key="index">
+          <view class="goods-info">
+            <view class="cover">
+              <image src="../../images/{{item.imgName}}"></image>
+            </view>
+            <view class="info">
+              <view class="rec-name">
+                <i class="mod_tag">
+                  <image src="../../images/{{item.tagName}}"></image>
+                </i>
+                {{item.goodsDesc}}
+              </view>
+              <view class="flex-wrap">
+                <view class="price-info">
+                  <view class="price">
+                    ￥{{item.price}}
+                  </view>
+                  <view class="mod-sign">
+                    <span>{{item.mod}}</span>
+                  </view>
+                </view>
+                <view class="recommend-count">
+                  <view class="recommendNum">
+                    {{item.recommendNum}}条评论
+                  </view>
+                  <view class="recommendRate">
+                    {{item.recommendRate}}好评率
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
       </view>
     </view>
   </view>
