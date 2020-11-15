@@ -1,0 +1,26 @@
+<!--pages/setDetail/setDetail.wxml-->
+<view class="account">
+  <view class="wrap">
+    <view class="head-title">
+      <text>管理我的账户</text>
+    </view>
+    <view class="userinfo">
+      <view class="user-avatar">
+        <image src="../../images/avatar.png"></image>
+      </view>
+      <view class="user-detail">
+        <view class="user-name">轩潇潇夕</view>
+        <view class="user-id">用户名: jd_6fd0a4cdfcf44</view>
+      </view>
+    </view>
+  </view>
+  <block wx:for="{{accountGroup}}" wx:key="index">
+    <view class="actionArea">
+      <view class="account-manage">
+        {{item.accountName}}
+        <text class="accountDesc">{{item.accountDesc}}</text>
+      </view>
+    </view>
+  </block>
+  <button type="primary" bindtap="exit">退出登录</button>
+</view>

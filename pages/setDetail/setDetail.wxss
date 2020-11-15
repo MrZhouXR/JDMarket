@@ -1,0 +1,58 @@
+/* pages/setDetail/setDetail.wxss */
+.account{
+  background: #f7f7f7;
+}
+.wrap{
+  background: #ffffff;
+  padding-bottom: 20rpx;
+}
+.head-title{
+  margin: 20rpx 10rpx;
+}
+.userinfo{
+  display: flex;
+  background: #ffa9a9;
+  border-radius: 20rpx;
+  margin: 0 10rpx;
+  border: 2rpx solid #ff414e;
+  margin-bottom: 20rpx;
+}
+.user-avatar{
+  padding: 20rpx;
+}
+.user-avatar image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.user-detail{
+  font-size: 30rpx;
+  padding-top: 30rpx;
+}
+.actionArea{
+  display: block;
+  padding: 20rpx 0;
+  background: #ffffff;
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+}
+.account-manage{
+  display: block;
+  position: relative;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+.accountDesc{
+  float: right;
+  margin-right: 40rpx;
+  opacity: .6;
+}
+.accountDesc::after{
+  content: "";
+  transform: rotate(-45deg);
+  border-bottom: 1rpx solid #000000;
+  border-right: 1rpx solid #000000;
+  width: 15rpx;
+  height: 15rpx;
+  position: absolute;
+  top: 40%;
+}
