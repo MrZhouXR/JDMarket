@@ -1,13 +1,24 @@
 <!--pages/ShoppingCart/ShoppingCart.wxml-->
 <view class="shopping-cart">
-  <view class="emptycart" wx:if="emptycart == true">
-    <view class="cartImg">
-      <image src="../../images/购物车 (1).png" alt=""></image>
+  <block wx:if="{{emptycart == true}}">
+    <view class="emptycart">
+      <view class="cartImg">
+        <image src="../../images/购物车 (1).png" alt=""></image>
+      </view>
+      <view class="notice">
+        <span class="cart-notice">购物车空空如也，去逛逛吧~~</span>
+      </view>
     </view>
-    <view class="notice">
-      <span class="cart-notice">购物车空空如也，去逛逛吧~~</span>
+  </block>
+  <block wx:if="{{emptycart == false}}">
+    <view class="address-bar-wrap">
+      <view class="address-bar">
+        <view class="address">
+          
+        </view>
+      </view>
     </view>
-  </view>
+  </block>  
   <view class="recommend">
       <view class="recommend-title">
         <span class="recommend-title_text">
