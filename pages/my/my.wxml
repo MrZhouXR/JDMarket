@@ -31,7 +31,7 @@
           <view class="name-wrap">
             <span>{{userInfo.nickName}}</span>
             <view class="setImg">
-              <image id="setImage" src="{{setImage}}"></image>
+              <image id="setImage" src="{{setImage}}" bindtap="setDetail"></image>
             </view>
           </view>
           <view class="hor-tips hor-tips-t">

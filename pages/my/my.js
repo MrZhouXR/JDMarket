@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    login:false,
+    login: '' || false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     userInfo: {
       nickName: '轩潇潇夕'
@@ -228,6 +228,11 @@ Page({
   },
   bindGetUserInfo :function (e) {
     console.log(e.detail.userInfo)
+  },
+  setDetail: function (event) {
+    wx.navigateTo({
+      url: '../setDetail/setDetail',
+    })
   },
 
   /**
