@@ -6,6 +6,8 @@ Page({
    */
   data: {
     emptycart: true,
+    address: '' || '江西省南昌市青山湖区',
+    Allgoods:[],
     goodsList:[
       {
         imgName: '灵越笔记本.jpg',

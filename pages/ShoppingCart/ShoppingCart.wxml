@@ -1,6 +1,6 @@
 <!--pages/ShoppingCart/ShoppingCart.wxml-->
 <view class="shopping-cart">
-  <block wx:if="{{emptycart == true}}">
+  <block wx:if="{{emptycart == false}}">
     <view class="emptycart">
       <view class="cartImg">
         <image src="../../images/购物车 (1).png" alt=""></image>
@@ -10,13 +10,61 @@
       </view>
     </view>
   </block>
-  <block wx:if="{{emptycart == false}}">
+  <block wx:if="{{emptycart == true}}">
     <view class="address-bar-wrap">
       <view class="address-bar">
         <view class="address">
-          
+          {{address}}
         </view>
       </view>
+      <view class="goods-update">
+        <text>编辑商品</text>
+      </view>
+    </view>
+    <view class="jdContent" id="section-list">
+      <view class="section">
+        <view class="head-wrap">
+          <view class="head">
+            <radio class="select"></radio>
+            <image class="icon-shop" src="../../images/icon-shop.png"></image>
+            <view class="title oneline">
+              <text>龙维斯旗舰店</text>
+            </view>
+          </view>
+        </view>
+        <view class="item li-list">
+          <view class="goods goods-list">
+            <radio class="select"></radio>
+            <view class="image-wrap">
+              <image src="../../images/icon-shop.png"></image>
+            </view>
+            <view class="goods-content">
+              <view class="name">
+                <text>龙维斯圆领卫衣男长袖外套新品网红运动套装潮牌秋季套头衫情侣无帽宽松青少年休闲帽衫渣男衣服嘻哈三件套 2635灰色 L
+                </text>
+              </view>
+              <view class="goods-detail">
+                <text class="detail-attr">2635灰色,L</text>
+                <text class="service">,选服务</text>
+              </view>
+              <view class="goods-price">
+                <view class="single-price">
+                  <text>￥269.00</text>
+                </view>
+                <view class="num-wrap">
+                  <text>x2</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <van-submit-bar price="{{ 269 * 2 }}"  
+        button-text="去结算"
+        bind:submit="onClickButton"
+        tip="{{ true }}"
+      >
+      </van-submit-bar>
     </view>
   </block>  
   <view class="recommend">

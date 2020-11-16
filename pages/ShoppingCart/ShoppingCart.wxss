@@ -218,3 +218,94 @@
   width: 40rpx;
   height: 40rpx;
 }
+.address-bar-wrap{
+  background: #ffffff;
+  padding: 20rpx;
+  border-top: 1rpx solid #e9e9e9;
+  border-radius: 0 0 20rpx 20rpx;
+  display: flex;
+}
+.address-bar{
+  flex: 1;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 10rpx 40rpx;
+  max-width: 100%;
+}
+.goods-update{
+  display: inline-block;
+  margin-top: 10rpx;
+  opacity: .6;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+.address::after{
+  content: "";
+  position: absolute;
+  width: 2rpx;
+  height: 20rpx;
+  background: #bfbfbf;
+  right: 0;
+  margin-top: 10rpx;
+}
+.section{
+  position: relative;
+  background: #ffffff;
+  color: #000000;
+  padding: 40rpx;
+  margin-top: 40rpx;
+  border-radius: 30rpx;
+}
+.icon-shop{
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.title{
+  display: inline-block;
+}
+.goods{
+  display: flex;
+}
+.image-wrap{
+  display: inline-block;
+  margin-left: 50rpx;
+}
+.image-wrap image{
+  width: 248rpx;
+  height: 248rpx;
+}
+.goods-content{
+  display: inline-block;
+  position: relative;
+  padding: 20rpx;
+}
+.name{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goods-detail{
+  background: #e4e4e4;
+  border-radius: 20rpx;
+  padding: 5rpx;
+  font-size: 25rpx;
+  padding-left: 15rpx;
+  width: fit-content;
+}
+.goods-price{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.single-price{
+  color: #e4393c;
+}
+.select{
+  align-self: center;
+}
+

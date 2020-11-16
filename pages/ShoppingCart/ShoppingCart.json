@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "van-submit-bar": "@vant/weapp/submit-bar/index"
+  },
   "backgroundTextStyle":"light",
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "购物车",
