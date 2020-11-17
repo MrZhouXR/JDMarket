@@ -1,0 +1,63 @@
+/* pages/supermarket/supermarket.wxss */
+van-nav-bar {
+    position: fixed;
+    top: o;
+    width: 100%;
+    z-index: 99;
+}
+van-search {
+    position: relative;
+    top: 120rpx;
+}
+.swiper {
+    width: 100%;
+    height: 500rpx;
+    position: relative;
+    top: -100rpx;
+    z-index: -1;
+}
+.swiper-ad image{
+    width: 100%;
+    height: 100%;
+}
+.box-list-wrap {
+    width: 92%;
+    margin: auto;
+}
+.box-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+
+.box-list-item {
+    flex: 1;
+    
+}
+.list-icon {
+    width: 80rpx;
+    height: 80rpx;
+    margin: auto;
+}
+.list-icon image{
+    width: 100%;
+    height: 100%;
+}
+.box-list-item .title {
+    color: #666666;
+    font-size: 24rpx;
+    text-align: center;
+}
+.goods-list {
+    margin-top: 10rpx;
+}
+.list-title {
+    width: 100%;
+    height: 60rpx;
+}
+.list-title image {
+    width: 100%;
+    height: 100%;
+}

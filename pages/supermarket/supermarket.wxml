@@ -1,0 +1,44 @@
+<!--pages/supermarket/supermarket.wxml-->
+<van-nav-bar title="京东超市" left-arrow bind:click-left="onClickLeft" />
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" bind:search="onSearch" shape="round" background="none" />
+<swiper class="swiper" indicator-dots="true" indicator-color="rgba(0,0,0,.3)" indicator-active-color="#fff" autoplay="true" interval="2000">
+	<block wx:for="{{adItems}}" wx:key="index">
+		<swiper-item class="swiper-ad" item-id="">
+			<image src="{{item.image}}" />
+		</swiper-item>
+	</block>
+</swiper>
+<view class="box-list-wrap">
+	<swiper class="" indicator-dots="true" indicator-color="#999" indicator-active-color="red" circular="true">
+		<block wx:for="{{2}}" wx:key="index">
+			<swiper-item class="" item-id="">
+				<view class="box-list">
+					<block wx:for="{{items1}}" wx:key="index">
+						<view class="box-list-item">
+							<view class="list-icon">
+								<image src="{{item.image}}" />
+							</view>
+							<view class="title">{{item.title}}</view>
+						</view>
+					</block>
+				</view>
+				<view class="box-list">
+					<block wx:for="{{items2}}" wx:key="index">
+						<view class="box-list-item">
+							<view class="list-icon">
+								<image src="{{item.image}}" />
+							</view>
+							<view class="title">{{item.title}}</view>
+						</view>
+					</block>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+<view class="goods-list">
+	<view class="list-title">
+		<image class="" src="https://m.360buyimg.com/deepvisual/jfs/t1/66077/36/9779/14235/5d7710ccE8077000d/6b246f6a42cb4a67.png!q70.webp" mode="aspectFit|aspectFill|widthFix" />
+	</view>
+	<waterfall></waterfall>
+</view>
