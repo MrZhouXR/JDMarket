@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    topHeight: wx.db.statusBarHeight + wx.db.navBarHeight || 0 ,
     login: '' || false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     userInfo: {
@@ -171,7 +172,7 @@ Page({
         recommendRate: '100%'
       }
     ]
-  },
+  }, 
   getUserInfo: function () {
     const that = this
     wx.getSetting({

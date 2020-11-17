@@ -1,7 +1,10 @@
 <!--pages/my/my.wxml-->
 <view class="wrapper">
+  <view class="headstatus" style="height:{{topHeight}}px;">
+    <text>我的</text>
+  </view>
   <view class="head">
-    <view class="login">
+    <view class="login"> 
       <block wx:if="{{login == false}}">
         <view class="touxiang">
           <image class="txImg" src="../../images/my.png"></image>
@@ -13,7 +16,7 @@
               <image id="setImage" src="{{setImage}}"></image>
             </view>
           </view>
-          <button id="btn" open-type="getUserInfo" bindtap="getUserInfo" wx:if="{{canIUse}}">
+          <button id="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:if="{{canIUse}}">
             <!-- <view class="btn"> -->
             <view class="btn-login">
               <van-icon class="user-circle" name="user-circle-o" />
