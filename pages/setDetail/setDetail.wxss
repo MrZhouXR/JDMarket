@@ -2,6 +2,15 @@
 .account{
   background: #f7f7f7;
 }
+.headstatus{
+  background: #ff0000;
+  color: #fff;
+  text-align: center;
+}
+.headstatus text{
+  position: relative;
+  top: 55rpx;
+}
 .wrap{
   background: #ffffff;
   padding-bottom: 20rpx;

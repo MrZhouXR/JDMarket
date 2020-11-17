@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    topHeight: wx.db.statusBarHeight + wx.db.navBarHeight || 0 ,
     accountGroup:[
       {
         accountName: '收货地址管理',

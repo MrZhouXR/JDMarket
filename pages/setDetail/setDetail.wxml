@@ -1,5 +1,8 @@
 <!--pages/setDetail/setDetail.wxml-->
 <view class="account">
+  <view class="headstatus" style="height:{{topHeight}}px;">
+    <text>账户管理</text>
+  </view>
   <view class="wrap">
     <view class="head-title">
       <text>管理我的账户</text>
