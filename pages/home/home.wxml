@@ -1,5 +1,111 @@
 <!--pages/home/home.wxml-->
-<view>
-    hhh
+<view class="top" style="height:{{topHeight}}px;">
+	<span>京东购物</span>
 </view>
-  
+
+<navigation-bar title="{{nbTitle}}" front-color="{{nbFrontColor}}" background-color="{{nbBackgroundColor}}" />
+
+<view class="search">
+	<van-search style="top:{{topHeight}}px" value="{{ value }}" shape="round" background="#fa2c19" placeholder="请输入搜索关键词" />
+</view>
+<view class="wrapper">
+	<!-- 这一部分可以弄成组件 -->
+	<view class="ad-items-wrap">
+		<swiper class="ad-items" autoplay="true" interval="2000" indicator-dots="true" indicator-active-color="#fff">
+			<block wx:for="{{adItemImages}}" wx:key="index">
+				<swiper-item class="ad-items-img">
+					<image src="{{item}}" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view class="ad-items2">
+		<view class="ad-items2-left">
+			<image src="/home-images/ad-items2-left.png" />
+		</view>
+		<view class="ad-items2-mid">
+			<image src="/home-images/ad-items2-mid1.gif" />
+		</view>
+		<view class="ad-items2-right">
+			<image src="/home-images/ad-items2-right.png" />
+		</view>
+	</view>
+</view>
+<view class="box-list-wrap">
+	<swiper class="" indicator-dots="true" indicator-color="#999" indicator-active-color="red" circular="true">
+		<block wx:for="{{2}}" wx:key="index">
+			<swiper-item class="" item-id="">
+				<view class="box-list">
+					<block wx:for="{{boxListInfo}}" wx:key="index">
+						<navigator class="box-list-item" target="self" url="/pages/supermarket/supermarket" hover-class="none" open-type="navigate">
+								<view class="list-icon">
+									<image src="{{item.image}}" />
+								</view>
+								<view class="title">{{item.title}}</view>
+						</navigator>
+
+
+					</block>
+				</view>
+				<view class="box-list">
+					<block wx:for="{{boxListInfo2}}" wx:key="index">
+						<navigator class="box-list-item" target="self" url="/pages/supermarket/supermarket" hover-class="none" open-type="navigate">
+								<view class="list-icon">
+									<image src="{{item.image}}" />
+								</view>
+								<view class="title">{{item.title}}</view>
+						</navigator>
+					</block>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+
+<view class="seckill-wrap">
+	<view class="title-wrap">
+		<view class="seckill-title">京东秒杀</view>
+		<view class="seckill-timer">
+			<timer></timer>
+		</view>
+		<navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+			<view class="seckill-title-link">更多秒杀<span> ></span></view>
+		</navigator>
+	</view>
+	<view class="seckill-item-wrap">
+		<block wx:for="{{seckillInfo}}" wx:key="index">
+			<navigator class="seckill-item" url="/pages/supermarket/supermarket" hover-class="none" open-type="navigate">
+				<view class="seckill-item-img">
+					<image src="{{item.image}}" />
+				</view>
+				<view class="seckill-item-price">{{item.price}}</view>
+				<view class="seckill-item-oldPrice">{{item.oldPrice}}</view>
+			</navigator>
+		</block>
+	</view>
+</view>
+
+<view class="nav-class">
+	<van-tabs type="line" title-style="color:red">
+		<van-tab title="精选">
+			<view class="goods">
+				<waterfall ></waterfall>
+			</view>
+		</van-tab>
+		<van-tab title="自营">
+			<view class="goods">
+				<waterfall></waterfall>
+			</view>
+		</van-tab>
+		<van-tab title="海购">
+			<view class="goods">
+				<waterfall></waterfall>
+			</view>
+		</van-tab>
+		<van-tab title="特价">
+			<view class="goods">
+				<waterfall></waterfall>
+			</view>
+		</van-tab>
+	</van-tabs>
+</view>

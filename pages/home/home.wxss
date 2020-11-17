@@ -1,1 +1,179 @@
 /* pages/home/home.wxss */
+page {
+    background-color: rgb(226, 216, 216);
+}
+
+.top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color:#fa2c19;
+    z-index:100;
+    text-align: center;
+    color: #fff;
+}
+.top span {
+    position: relative;
+    top: 60rpx;
+}
+van-search {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+.wrapper {
+    margin-top: 212rpx;
+    width: 100%;
+    background-image: url('https://m.360buyimg.com/mobilecms/s1125x939_jfs/t1/154351/13/5154/61941/5fa7ca47E0a8f501e/db68c387bcc1b5c3.jpg');
+}
+.ad-items-wrap {
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+.ad-items {
+    width: 100%;
+    border-radius: 20rpx;
+    transform: translateY(0);
+    overflow: hidden;
+    
+}
+.ad-items-img image{
+    width: 100%;
+    height: 100%;
+}
+.ad-items2 {
+    width: 96%;
+    margin: auto;
+    display: flex;
+    border-radius: 20rpx;
+    transform: translateY(0);
+    overflow: hidden;
+}
+.ad-items2 image {
+    width: 100%;
+    height: 200rpx;
+}
+.ad-items2-left {
+    flex: 1;
+}
+.ad-items2-mid {
+    flex: 2;
+}
+.ad-items2-right {
+    flex: 1;
+}
+.box-list-wrap {
+    width: 92%;
+    margin: auto;
+    background-color: rgb(226, 216, 216);
+    border-radius: 20rpx;
+    margin-top: 20rpx;
+}
+.box-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+
+.box-list-item {
+    flex: 1;
+    
+}
+.list-icon {
+    width: 80rpx;
+    height: 80rpx;
+    margin: auto;
+}
+.list-icon image{
+    width: 100%;
+    height: 100%;
+}
+.box-list-item .title {
+    color: #666666;
+    font-size: 24rpx;
+    text-align: center;
+}
+.seckill-wrap {
+    width: 92%;
+    margin: auto;
+    margin-top: 10rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+.title-wrap {
+    width: 100%;
+    height: 68rpx;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 68rpx;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABYwAAACQBAMAAABZrTKvAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURUdwTO0QEO0QEO0WFuoNDe0SEuwREewREYfJP0kAAAAIdFJOUwB9ZA+zIzZPcd7tbgAAA/BJREFUeNrt3TGP41QUBtDZtRbaTVig3SxIaS0sQz1oEO0uwaaFIk4LAeK/j+1kMg6FBynzZnPDOfVUnz5dX9vPmZubSW/uHtzeQEjjGt+Jg5ju1Bg1hgtbKuzGqDF8LH+NavyjOIjp51GNfxAHMb0Y1fi1OIjp1ajG78VBUF8fW/y9MIi/VdgpCCu7f+R2mwuDsF4eavxWFAT2YWjx54IgtF/e3N3+LQYAAAAAAACeyKvtYr58Lwci+242+FMSxPXJ7OBXWRBVtriv8TyXBkF9Mzv6ShpEH8Yd45iYXo5aPHsrD0L6bVzjL+RByJ1idsJWQUSfntb4d4kQ0IvTGr+WCAF9OK2xD3uJ6I/TGn8pEQJanNZ4LhHUGD6G2b9IBDUGSwWoMf9XHrhxBbz+4Ap4Gc0VcDSIK+CgJtfAsXmugI+YuIatYvTk2Bf+RPXTQ40/kwbhx7FhTFx+/Ipr4KcIuQZ+GBYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACC3PZEBwWZYVekz0FhedPJcEkRVFtVoVciB4izvGMbF3iqqq667HoiBwjYuqbtbrqtBjAu8UZdX0PV5ZKgg8jcu6bppm7SaP6DtF023HakzgpaLqh7FpTOhpnPWrcdOYxsS+xRuWim4au8cj8lIxTGNLBRe9NRSTB3+y4YFbXa0MYy532A7yqT+o6nX/+kONudwW7980F1Nbxf5PnNXkQuX7x2mTszY/HA2S1nlJO1uVbhiXdbNp28mnwt3uXJaFYXxeiXsiTJRuWW/a5bZtd+uJO7jske2ZR2+jD6ubENPEWzXtu17bTLzdyLse+xrvrBaXjqWkjLdut0ONl+1axAkvetWwulV6nKTG5WEY9+N4Yqu4MYrPuwPpLnrLtp285HFGvJvtocbLXWVxSzYt9he9/pIn5AQ1ru+HcTeObRXparw53IHsVmr89Mp6e6zxcr0SSOKLnktemho3oxo3apxsWhzvQMyKJBe7UY13KzdyqaeFWZGmxvt05/sau+ClnhZdyPJ48ny/3bx7oMZqHHkaz+8TVuPk00LISfI9jImFhNNP47lZ8Sy3eBJ5hqVCjZPdQs/dRNuN49fY64/0MS88cEs1JrL+ufzCy+jUNR69/hDy03M06HnGxT7mhZBTbW37g5rzxw5qcta0GB0NMo1TBFxvHo7Nq3GyaXE8qGlWpMi32yr+w0dMnL28Ne1269h8wruPTdsul9OflHL2OK6a3fARkyyS5Ntd75p2+MBfi5Nux4dPSh0iTLVW9D9e3PjPHqljrtY+8E84JwT8PJe9ovSzQUkHRRewWZy+x7kWpx3ImY0N4BIueCIAALgE/wB5Hy4N/5rMxgAAAABJRU5ErkJggg==');
+}
+.seckill-title {
+    width: 110rpx;
+    float: left;
+    color: #333333;
+    font-size: 28rpx;
+    text-align: center;
+    margin-left: 20rpx;
+}
+.seckill-timer {
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20rpx;
+}
+.seckill-title-link {
+    float: right;
+    margin-right: 20rpx;
+    color: #f23030;
+    font-size: 24rpx;
+}
+.seckill-title-link span{
+    width: 24rpx;
+    height: 24rpx;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #f23030;
+    color: #fff;
+    text-align: center;
+    line-height: 24rpx;
+}
+.seckill-item-wrap {
+    width: 100%;
+    display: flex;
+}
+.seckill-item {
+    flex: 1;
+}
+.seckill-item-img {
+    width: 110rpx;
+    height: 110rpx;
+    margin: auto;
+
+}
+.seckill-item-img image {
+    width: 100%;
+    height: 100%;
+}
+.seckill-item-price {
+    color: #f2270c;
+    font-size: 26rpx;
+    text-align: center;
+    margin-top: 16rpx;
+}
+.seckill-item-oldPrice {
+    color: #999999;
+    font-size: 24rpx;
+    text-align: center;
+    text-decoration:line-through;
+    margin-bottom: 16rpx;
+}
+.nav-class {
+    background-color: #fff;
+    margin-top: 20rpx;
+}
