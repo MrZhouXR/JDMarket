@@ -1,6 +1,9 @@
 <!--pages/ShoppingCart/ShoppingCart.wxml-->
 <view class="shopping-cart">
-  <block wx:if="{{emptycart == false}}">
+  <view class="headstatus" style="height:{{topHeight}}px;">
+    <text>购物车</text>
+  </view>
+  <block wx:if="{{emptycart == true}}">
     <view class="emptycart">
       <view class="cartImg">
         <image src="../../images/购物车 (1).png" alt=""></image>
@@ -10,7 +13,7 @@
       </view>
     </view>
   </block>
-  <block wx:if="{{emptycart == true}}">
+  <block wx:if="{{emptycart == false}}">
     <view class="address-bar-wrap">
       <view class="address-bar">
         <view class="address">
@@ -25,7 +28,7 @@
       <view class="section">
         <view class="head-wrap">
           <view class="head">
-            <radio class="select"></radio>
+            <radio class="select"  bindtap="RadioChange" ></radio>
             <image class="icon-shop" src="../../images/icon-shop.png"></image>
             <view class="title oneline">
               <text>龙维斯旗舰店</text>
@@ -34,7 +37,7 @@
         </view>
         <view class="item li-list">
           <view class="goods goods-list">
-            <radio class="select"></radio>
+            <radio class="select"  bindchange="RadioChange" ></radio>
             <view class="image-wrap">
               <image src="../../images/icon-shop.png"></image>
             </view>

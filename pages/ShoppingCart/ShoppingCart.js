@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    topHeight: wx.db.statusBarHeight + wx.db.navBarHeight || 0 ,
     emptycart: true,
     address: '' || '江西省南昌市青山湖区',
     Allgoods:[],
@@ -118,6 +119,11 @@ Page({
         recommendRate: '100%'
       }
     ]
+  },
+  RadioChange: function (e) {
+    console.log(e.detail.value);
+
+
   },
 
   /**
