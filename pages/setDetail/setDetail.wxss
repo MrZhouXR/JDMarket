@@ -2,6 +2,7 @@
 .account{
   background: #f7f7f7;
 }
+<<<<<<< HEAD
 .top{
   position: sticky;
   background: #ffffff;
@@ -23,6 +24,16 @@
   position: absolute;
   top: 75rpx;
   left: 20rpx;
+=======
+.headstatus{
+  background: #ff0000;
+  color: #fff;
+  text-align: center;
+}
+.headstatus text{
+  position: relative;
+  top: 55rpx;
+>>>>>>> e7e798b88f92087394db61a7fe07c05615d09090
 }
 .wrap{
   background: #ffffff;

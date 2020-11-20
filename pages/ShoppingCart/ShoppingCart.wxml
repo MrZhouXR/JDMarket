@@ -1,6 +1,7 @@
 <!--pages/ShoppingCart/ShoppingCart.wxml-->
 
 <view class="shopping-cart">
+<<<<<<< HEAD
   <view class="top" style="height:{{topHeight}}px;">
     <text>购物车</text>
   </view>
@@ -38,6 +39,48 @@
                   <text>{{item.shopName}}</text>
                 </view>
               </checkbox-group>
+=======
+  <view class="headstatus" style="height:{{topHeight}}px;">
+    <text>购物车</text>
+  </view>
+  <block wx:if="{{emptycart == true}}">
+    <view class="emptycart">
+      <view class="cartImg">
+        <image src="../../images/购物车 (1).png" alt=""></image>
+      </view>
+      <view class="notice">
+        <span class="cart-notice">购物车空空如也，去逛逛吧~~</span>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{emptycart == false}}">
+    <view class="address-bar-wrap">
+      <view class="address-bar">
+        <view class="address">
+          {{address}}
+        </view>
+      </view>
+      <view class="goods-update">
+        <text>编辑商品</text>
+      </view>
+    </view>
+    <view class="jdContent" id="section-list">
+      <view class="section">
+        <view class="head-wrap">
+          <view class="head">
+            <radio class="select"  bindtap="RadioChange" ></radio>
+            <image class="icon-shop" src="../../images/icon-shop.png"></image>
+            <view class="title oneline">
+              <text>龙维斯旗舰店</text>
+            </view>
+          </view>
+        </view>
+        <view class="item li-list">
+          <view class="goods goods-list">
+            <radio class="select"  bindchange="RadioChange" ></radio>
+            <view class="image-wrap">
+              <image src="../../images/icon-shop.png"></image>
+>>>>>>> e7e798b88f92087394db61a7fe07c05615d09090
             </view>
           </view>
           <view class="item li-list">

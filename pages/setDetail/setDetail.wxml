@@ -1,9 +1,14 @@
 <!--pages/setDetail/setDetail.wxml-->
 
 <view class="account">
+<<<<<<< HEAD
   <view class="top" style="height:{{topHeight}}px;">
     <view class="navback" bindtap="backmy"></view>
 	  <text>帐户设置</text>
+=======
+  <view class="headstatus" style="height:{{topHeight}}px;">
+    <text>账户管理</text>
+>>>>>>> e7e798b88f92087394db61a7fe07c05615d09090
   </view>
   <view class="wrap">
     <view class="head-title">

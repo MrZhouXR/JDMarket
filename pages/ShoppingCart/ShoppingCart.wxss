@@ -16,6 +16,15 @@
   padding: 0;
   background: #f7f7f7;
 }
+.headstatus{
+  background: #ff0000;
+  color: #fff;
+  text-align: center;
+}
+.headstatus text{
+  position: relative;
+  top: 55rpx;
+}
 .emptycart{
   display: block;
   overflow: hidden;
