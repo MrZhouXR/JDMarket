@@ -1,0 +1,24 @@
+{
+  "name": "jdmarket",
+  "version": "1.0.0",
+  "description": "1. home:首页\r      classify：分类\r      recommend：推荐\r      ShoppingCart：购物车\r      profile：我的",
+  "main": "app.js",
+  "dependencies": {
+    "@vant/weapp": "^1.5.2",
+    "weui-miniprogram": "^1.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrZhouXR/JDMarket.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrZhouXR/JDMarket/issues"
+  },
+  "homepage": "https://github.com/MrZhouXR/JDMarket#readme"
+}

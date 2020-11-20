@@ -1,5 +1,10 @@
 <!--pages/setDetail/setDetail.wxml-->
+
 <view class="account">
+  <view class="top" style="height:{{topHeight}}px;">
+    <view class="navback" bindtap="backmy"></view>
+	  <text>帐户设置</text>
+  </view>
   <view class="wrap">
     <view class="head-title">
       <text>管理我的账户</text>

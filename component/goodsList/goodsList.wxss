@@ -1,0 +1,125 @@
+/* component/goodsList/goodsList.wxss */
+.goods-info{
+  position: relative;
+  width: 50%;
+  float: left;
+  margin-bottom: 2rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  background: #fff;
+  padding: 15rpx 15rpx 0;
+}
+.goods-info:nth-child(2n){
+  float: right;
+  margin-right: -2rpx;
+}
+.goods-info::after{
+  content: "";
+  position: absolute;
+  width: 1rpx;
+  height: 1rpx;
+  right: 2rpx;
+  bottom: 2rpx;
+  opacity: .5;
+  background: #999;
+}
+.cover{
+  position: relative;
+  overflow: hidden;
+  padding-top: 100%;
+  height: 0;
+}
+.cover image{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 314rpx;
+  height: 314rpx;
+}
+.rec-name{
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 12rpx 0 8rpx;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #333;
+  height: 72rpx;
+}
+.mod_tag{
+  height: 28rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -2rpx;
+  margin-right: 10rpx;
+  font-style: normal;
+}
+.mod_tag image{
+  display: block;
+  height: 28rpx;
+  width: 42rpx;
+  height: 28rpx;
+}
+.price-info{
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+.price{
+  display: inline-block;
+  font-size: 35rpx;
+  color: #e93b3d;
+  margin-right: 6rpx;
+  line-height: 20rpx;
+  font-weight: bold;
+}
+.mod-sign{
+  margin-top: -2rpx;
+  color: #e4393c;
+  background: #fff;
+  display: inline-block;
+  position: relative;
+  border-radius: 4rpx;
+  min-width: 32rpx;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+  text-align: center;
+}
+.mod-sign span{
+  display: inline-block;
+  background: #fff;
+  padding: 0 6rpx;
+}
+.mod-sign::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border: 1rpx solid #e4393c;
+  transform: scale(.51);
+  transform-origin: 0 0;
+  bottom: -100%;
+  right: -100%;
+  border-radius: 3rpx;
+}
+.recommend-count{
+  display: flex;
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+}
+.recommendNum{
+  opacity: .5;
+  margin-right: 10rpx;
+  margin-left: 5rpx;
+}
+.recommendRate{
+  opacity: .5;
+}

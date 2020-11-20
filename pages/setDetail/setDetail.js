@@ -1,10 +1,12 @@
 // pages/setDetail/setDetail.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    topHeight: wx.db.statusBarHeight + wx.db.navBarHeight || 0 ,
     accountGroup:[
       {
         accountName: '收货地址管理',
@@ -56,8 +58,15 @@ Page({
         }
       ]
     })
+    app.globalData.login = this.data.login
+    
     wx.navigateBack({ // 返回上一个页面
       delta: 2,
+    })
+  },
+  backmy:function() {
+    wx.switchTab({
+      url: '../my/my',
     })
   },
 

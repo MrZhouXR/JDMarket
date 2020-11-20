@@ -2,6 +2,28 @@
 .account{
   background: #f7f7f7;
 }
+.top{
+  position: sticky;
+  background: #ffffff;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+}
+.top text{
+  position: absolute;
+  top: 50%;
+  left: 50rpx;
+}
+.navback{
+  width: 20rpx;
+  height: 20rpx;
+  border-bottom: 1rpx solid #000000;
+  border-left: 1rpx solid #000;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 75rpx;
+  left: 20rpx;
+}
 .wrap{
   background: #ffffff;
   padding-bottom: 20rpx;

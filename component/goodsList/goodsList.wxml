@@ -1,0 +1,32 @@
+<!--component/goodsList/goodsList.wxml-->
+<view class="goods-info">
+  <view class="cover">
+    <image src="../../images/{{imgName}}"></image>
+  </view>
+  <view class="info">
+    <view class="rec-name">
+      <i class="mod_tag">
+        <image src="../../images/{{tagName}}"></image>
+      </i>
+      {{goodsDesc}}
+    </view>
+    <view class="flex-wrap">
+      <view class="price-info">
+        <view class="price">
+          ￥{{price}}
+        </view>
+        <view class="mod-sign">
+          <span>{{item.mod}}</span>
+        </view>
+      </view>
+      <view class="recommend-count">
+        <view class="recommendNum">
+          {{recommendNum}}条评论
+        </view>
+        <view class="recommendRate">
+          {{recommendRate}}好评率
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
