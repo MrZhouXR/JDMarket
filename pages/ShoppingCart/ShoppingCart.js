@@ -6,11 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-<<<<<<< HEAD
     topHeight: wx.db.statusBarHeight + wx.db.navBarHeight || 0,
-=======
-    topHeight: wx.db.statusBarHeight + wx.db.navBarHeight || 0 ,
->>>>>>> e7e798b88f92087394db61a7fe07c05615d09090
     emptycart: true,
     login: '' || false,
     address: '' || '江西省南昌市青山湖区',
@@ -148,7 +144,6 @@ Page({
       }
     ]
   },
-<<<<<<< HEAD
   handeItemChange(e) {
     console.log(e);
     // 1 获取被修改的商品的id
@@ -199,13 +194,6 @@ Page({
   //   //   carts[index].checked: e.detail
   //   // })
   // },
-=======
-  RadioChange: function (e) {
-    console.log(e.detail.value);
-
-
-  },
->>>>>>> e7e798b88f92087394db61a7fe07c05615d09090
 
   /**
    * 生命周期函数--监听页面加载
