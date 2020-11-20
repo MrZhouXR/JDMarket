@@ -181,6 +181,10 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
             success: function(res) {
+              wx.setStorageSync('userInfo', res.userInfo)
+              // console.log(that.data.login);
+              var app = getApp()
+              app.globalData.userInfo = res.userInfo
               console.log(res.userInfo)
               that.setData({
                 login: true,
@@ -221,10 +225,14 @@ Page({
                   }
                 ]
               })
-            }
+              app.globalData.login = that.data.login
+              console.log(app.globalData.login);
+              // wx.setStorageSync('login', that.data.login)
+              // console.log(that.data.login);
+            },
           })
         }
-      }
+      },
     })
   },
   bindGetUserInfo :function (e) {
