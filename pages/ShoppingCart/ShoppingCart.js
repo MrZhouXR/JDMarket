@@ -14,25 +14,26 @@ Page({
     totalPrice: '' || 0,
     totalNum: '' || 0,
     allChecked: '' || false,
-    carts: [{
-        shopName: '龙维斯',
-        src: '灵越笔记本.jpg',
-        desc: '龙维斯圆领卫衣男长袖外套新品网红运动套装潮牌秋季套头衫情侣无帽宽松青少年休闲帽衫渣男衣服嘻哈三件套 2635灰色 L',
-        detail: '2635灰色 L',
-        price: 269,
-        num: '' || 1,
-        checked: false,
-        // goods_id: '' || 1
-      },
-      {
-        shopName: '龙维斯',
-        src: '灵越笔记本.jpg',
-        desc: '龙维斯圆领卫衣男长袖外套新品网红运动套装潮牌秋季套头衫情侣无帽宽松青少年休闲帽衫渣男衣服嘻哈三件套 2635灰色 L',
-        detail: '2635灰色 L',
-        price: 269,
-        num: '' || 1,
-        checked: false
-      }
+    carts: [
+      // {
+    //     shopName: '龙维斯',
+    //     src: '灵越笔记本.jpg',
+    //     desc: '龙维斯圆领卫衣男长袖外套新品网红运动套装潮牌秋季套头衫情侣无帽宽松青少年休闲帽衫渣男衣服嘻哈三件套 2635灰色 L',
+    //     detail: '2635灰色 L',
+    //     price: 269,
+    //     num: '' || 1,
+    //     checked: false,
+    //     // goods_id: '' || 1
+    //   },
+    //   {
+    //     shopName: '龙维斯',
+    //     src: '灵越笔记本.jpg',
+    //     desc: '龙维斯圆领卫衣男长袖外套新品网红运动套装潮牌秋季套头衫情侣无帽宽松青少年休闲帽衫渣男衣服嘻哈三件套 2635灰色 L',
+    //     detail: '2635灰色 L',
+    //     price: 269,
+    //     num: '' || 1,
+    //     checked: false
+    //   }
     ],
     goodsList: [{
         imgName: '灵越笔记本.jpg',
@@ -212,7 +213,7 @@ Page({
           content: "您是否要删除？" 
         })
       if (res.confirm) {
-        carts.splice(goods_id,1)
+        carts.splice(index,1)
         this.setCart(carts)
         console.log(this.data.carts);
       }
@@ -239,10 +240,14 @@ Page({
    */
   onShow: function () {
     let login = app.globalData.login
+    let carts = wx.buycart // 获取购物车中所有商品
     console.log(login);
+    console.log(carts);
+    
     if (login) {
       this.setData({
-        login: login
+        login: login,
+        carts: carts
       })
       if (this.data.carts.length != 0) {
         for (let i = 0; i < this.data.carts.length; i++) {
@@ -252,9 +257,9 @@ Page({
           })
           console.log(this.data.carts[i].goods_id);
         }
-        this.setData({
-          emptycart: false
-        })
+        // this.setData({
+        //   emptycart: false
+        // })
       }
     } else {
       wx.showToast({
@@ -266,6 +271,15 @@ Page({
   toLogin: function () {
     wx.switchTab({
       url: '../my/my',
+    })
+  },
+  toDetail: function(e) {
+    console.log(e);
+    // let goodslist = this.setData.goodslist
+    // goodslist.forEach(item => item)
+    // wx.buy
+    wx.navigateTo({
+      url: '../detail/detail',
     })
   },
 

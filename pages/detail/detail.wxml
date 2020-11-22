@@ -1,0 +1,119 @@
+<!--pages/detail/detail.wxml-->
+<view class="allbgc">
+  <view style="height:{{statusBarHeight}}px;background-Color:#f6f6f6;width:100%"> </view>
+  <view class="status" style="height:{{statusBarHeight}}px;background-Color:{{statusColor}};width:100%"></view>
+  <view class="nav" style="height:{{navbarHeight}}px;background-Color:{{navbarColor}}">
+    <view class="left" style="opacity:{{opacity}};background-Color:{{leftColor}}">
+      <view class="back" catchtap="back">
+        <van-icon name="arrow-left" />
+      </view>
+      <view class="line"></view>
+      <view class="more">
+        <van-icon name="wap-nav" />
+      </view>
+    </view>
+    <view class="search" style="opacity:{{opacity}}">
+      <van-search value="{{ value }}" shape="round" background="none" placeholder="请输入搜索关键词" />
+    </view>
+  </view>
+  <view class="classify" style="top:{{allheight}}px" hidden="{{hidden}}">
+    <van-tabs active="{{ active }}" bind:change="onChange1" line-width="30px">
+      <van-tab title="商品"></van-tab>
+      <van-tab title="评价"></van-tab>
+      <van-tab title="详情"></van-tab>
+      <van-tab title="推荐 "></van-tab>
+    </van-tabs>
+  </view>
+  <view class="swiper">
+    <swiper circular="true" bindchange="swiperChange">
+      <swiper-item wx:for="{{img}}" wx:key="index">
+        <image src="{{item}}" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="img-num">
+    {{currentNum}}/{{img.length}}
+  </view>
+  <view class="desc" id="distance">
+    <view class="title">
+      <view class="price">
+        <span class="right">￥</span>
+        <span class="left">{{goodprice}}</span>
+        <span class="right">.00</span>
+      </view>
+      <view class="downprice">
+        <view class="downpriceimg"></view>
+        <p>降价提醒</p>
+      </view>
+      <view class="like">
+        <view class="likeimg"></view>
+        <p>收藏</p>
+      </view>
+    </view>
+    <view class="content">
+      <h1>{{content}}</h1>
+    </view>
+  </view>
+  <view class="styleselect" wx:for="{{5}}" wx:key="index">
+    <view class="good">
+      <view class="goods" catchtap="showPopup">
+        <view>已选</view>
+        <view class="selected">
+          <p>{{xuanle}},{{selectnum}}个</p>
+        </view>
+        <view class="img"></view>
+      </view>
+      <van-popup show="{{ show }}" round closeable
+        close-icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAzUExURUdwTPLy8vPz8/f39/Ly8vLy8vLy8vn5+fLy8vPz8/Ly8vPz8/Ly8oyMjLa2tpaWlsXFxWJZmN4AAAAMdFJOUwDociPz1lIPf6i/gtWaRhUAAADZSURBVDjLlZXbDoQgDEQBi9yK+P9fu7hZFbHK7DzZeOIE2o5KXTSZEC2RjcFM6lEuWW5kk5MxT9yJvIDOmgXpuec8P8hfbQM/KrT2L1wlAd/OfeaBfidyegRqhxgf5o7GIG2fTGe9luUslrKeRapg09+S80EuOZem73VeGof6ciebx68mZVgie45N15QdKB1X2xNZIi/H2hSVZZHsZdXtFmWSZPBOkmgtkFY8jOAe5eu5kwG/cLiF8FDgYwYPLrwK+HLB64oHAB4peEjBsfdHkOLRjIf94PfxAYczOyeXERCMAAAAAElFTkSuQmCC"
+        close-icon-position="top-right" position="bottom" custom-style="height: 65%" bind:close="onClose">
+        <view class="pop">
+          <view class="selectimg">
+          <view class="img">
+            <image src="{{selectimg}}" />
+          </view>
+        
+          <view class="price">
+            <span class="right">￥</span>
+            <span class="left">{{goodprice}}</span>
+            <span class="right">.00</span>
+          </view>
+        </view>
+          <view class="color">
+            <view class="title1">
+              <view class="color">
+                <p>颜色</p>
+              </view>
+              <block wx:for="{{selects}}" wx:key="index">
+                <span class="{{index==idx?'_item':'item'}}" no="1" dis="0" dissel="0" catchtap="changecolr"
+                  data-text="{{item}}" data-index="{{index}}">{{item.title}}</span>
+              </block>
+            </view>
+          </view>
+        </view>
+        <view class="goodsnum">
+          <view class="shuliang"><span>数量</span></view>
+          <view><van-stepper value="{{ 1 }}" bind:change="onChange" /></view>
+        </view>
+        <view class="btn">
+          <view class="left">
+            <view class="car bubble" catchtap="addcar" >加入购物车</view>
+          </view>
+          <view class="right">
+            <view class="car">立即购买</view>
+          </view>
+        </view>
+      </van-popup>
+    </view>
+  </view>
+  <view class="bottom">
+    <van-goods-action>
+      <van-goods-action-icon icon="shop-o" text="店铺" />
+      <van-goods-action-icon icon="chat-o" text="客服" />
+      <van-goods-action-icon icon="cart-o" text="购物车" />
+      <!-- <van-goods-action-button text="加入购物车" type="warning" />
+      <van-goods-action-button text="立即购买"  /> -->
+      <view class="car bubble" catchtap="showPopup">加入购物车</view>
+      <view class="buy">立即购买</view>
+    </van-goods-action>
+  </view>
+</view> 

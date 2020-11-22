@@ -6,6 +6,7 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     wx.db = {}
+    wx.buycart = []
     let info =wx.getSystemInfoSync()
     wx.db.statusBarHeight = info.statusBarHeight
     if (info.platform ==='android'){

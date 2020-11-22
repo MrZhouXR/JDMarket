@@ -5,7 +5,7 @@
     <text>购物车</text>
   </view>
   <block wx:if="{{ login === true }}">
-    <block wx:if="{{emptycart == true}}">
+    <block wx:if="{{carts.length == 0}}">
       <view class="emptycart">
         <view class="cartImg">
           <image src="../../images/购物车 (1).png" alt=""></image>
@@ -15,7 +15,7 @@
         </view>
       </view>
     </block>
-    <block wx:if="{{emptycart == false}}">
+    <block wx:if="{{carts.length != 0}}">
       <view class="address-bar-wrap">
         <view class="address-bar">
           <view class="address">
@@ -47,7 +47,7 @@
                 <checkbox checked="{{item.checked}}" id="select"></checkbox>
 
                 <view class="image-wrap">
-                  <image src="../../images/{{item.src}}"></image>
+                  <image src="{{item.src}}"></image>
                 </view>
                 <view class="goods-content">
                   <view class="name">
@@ -138,7 +138,7 @@
                     <view class="recommendRate">
                       {{item.recommendRate}}好评率
                     </view>
-                    <view class="cartIcon">
+                    <view class="cartIcon" bindtap="toDetail" data-index="{{index}}">
                       <image src="../../images/购物车.png"></image>
                     </view>
                   </view>

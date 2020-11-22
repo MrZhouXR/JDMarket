@@ -14,7 +14,7 @@
       </block>
     </van-tabs>
   </view>
-  <view class="goods">
-    <waterfall></waterfall>
+  <view class="goods" catchtap="godetail">
+     <waterfall></waterfall>
   </view>
 </view>
