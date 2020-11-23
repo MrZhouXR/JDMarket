@@ -1,4 +1,5 @@
 // pages/detail/detail.js
+let app = getApp()
 Page({
 
   /**
@@ -44,42 +45,52 @@ Page({
   //加入购物车
   addcar(e) {
     // console.log(e);
-   
-    let that = this
-    let a = 0
-    for (let i = 0; i < wx.buycart.length; i++) {
-      //  console.log(wx.buycart[i]);
+    if (app.globalData.login) {
+      let that = this
+      let a = 0
+      for (let i = 0; i < wx.buycart.length; i++) {
+        //  console.log(wx.buycart[i]);
 
-      if (wx.buycart[i].select == that.data.xuanle) {
-        a = 1
-        wx.buycart[i].num = wx.buycart[i].num + that.data.selectnum
+        if (wx.buycart[i].select == that.data.xuanle) {
+          a = 1
+          wx.buycart[i].num = wx.buycart[i].num + that.data.selectnum
+        }
       }
-    }
-    if (a == 0) {
-      // let title = that.data.selects[index].title 
-      // console.log(title);
-      
-      wx.buycart.push({
-        shopName: that.data.store,
-        desc: that.data.content,
-        src: that.data.selectimg,
-        detail: that.data.xuanle,
-        price: that.data.goodprice,
-        num: that.data.selectnum,
-        checked: '' || false
-        // title: that.data.selects.values.title
+      if (a == 0) {
+        // let title = that.data.selects[index].title 
+        // console.log(title);
+
+        wx.buycart.push({
+          shopName: that.data.store,
+          desc: that.data.content,
+          src: that.data.selectimg,
+          detail: that.data.xuanle,
+          price: that.data.goodprice,
+          num: that.data.selectnum,
+          checked: '' || false
+          // title: that.data.selects.values.title
+        })
+        console.log(that.data.xuanle);
+        wx.switchTab({
+          url: '../ShoppingCart/ShoppingCart',
+        })
+      }
+      // console.log(wx.buycart);
+      wx.showToast({
+        title: '加入购物车成功',
+        icon: 'success',
+        duration: 2000
       })
-      console.log(that.data.xuanle);
-      wx.switchTab({
-        url: '../ShoppingCart/ShoppingCart',
+    } else {
+      wx.showLoading({
+        title: '请先登录',
       })
+      setTimeout(() => {
+        wx.switchTab({
+          url: '../my/my',
+        })
+      },2000)
     }
-    // console.log(wx.buycart);
-    wx.showToast({
-      title: '加入购物车成功',
-      icon: 'success',
-      duration: 2000
-    })
   },
   onChange(event) {
     let that = this
@@ -163,7 +174,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
     // let that = this
     // const statusbar = wx.db.statusBarHeight
     // const query = wx.createSelectorQuery()
